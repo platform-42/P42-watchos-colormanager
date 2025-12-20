@@ -11,7 +11,6 @@ public struct ColorTheme {
     @available(iOS 13.0, *)
     public struct Variant {
 
-        public let background: Color
         public let navigationBG: Color
         public let pickerBG: Color
 
@@ -21,7 +20,6 @@ public struct ColorTheme {
         public let logo: Color
         
         public init(
-            background: Color,
             navigationBG: Color,
             pickerBG: Color,
             navigationText: Color,
@@ -29,7 +27,6 @@ public struct ColorTheme {
             stroke: Color,
             logo: Color
         ) {
-            self.background = background
             self.navigationBG = navigationBG
             self.pickerBG = pickerBG
             self.navigationText = navigationText
@@ -76,11 +73,6 @@ public final class ColorManager {
 @available(iOS 17.0, *)
 public extension ColorManager {
 
-    // background colors
-    var background: Color {
-        colors.background
-    }
-
     var navigationBG: Color {
         colors.navigationBG
     }
@@ -93,7 +85,6 @@ public extension ColorManager {
         colors.navigationText
     }
 
-    // ornaments
     var tint: Color {
         colors.tint
     }
